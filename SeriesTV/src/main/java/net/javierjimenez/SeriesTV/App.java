@@ -17,7 +17,7 @@ public class App extends Application {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/series.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("/application.css").toExternalForm());
-			primaryStage.setTitle("Exercici JavaFx");
+			primaryStage.setTitle("Estadísticas Blanco");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

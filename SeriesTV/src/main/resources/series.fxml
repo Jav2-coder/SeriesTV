@@ -1,6 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" />
+<AnchorPane fx:controller="net.javierjimenez.SeriesTV.SeriesController" prefHeight="400.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane prefHeight="113.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#busquedaSeries" text="Cercar">
+               <GridPane.margin>
+                  <Insets left="494.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="search" maxWidth="-Infinity" prefHeight="31.0" prefWidth="316.0">
+               <GridPane.margin>
+                  <Insets left="145.0" />
+               </GridPane.margin></TextField>
+            <Label text="Sèrie">
+               <GridPane.margin>
+                  <Insets left="74.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutY="113.0" prefHeight="287.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="221.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="379.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ComboBox fx:id="temporadas" onAction="#listaTemporadas" prefWidth="300.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="224.0" left="36.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ListView fx:id="list_cap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="74.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="36.0" top="28.0" />
+               </GridPane.margin>
+            </ListView>
+            <Label fx:id="cap_cast" nodeOrientation="LEFT_TO_RIGHT" prefHeight="23.0" prefWidth="52.0" style="-fx-border-color: black; -fx-background-color: white;" textOverrun="CLIP" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets bottom="112.0" left="284.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="cap_lat" layoutX="515.0" layoutY="74.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="23.0" prefWidth="52.0" style="-fx-border-color: black; -fx-background-color: white;" textOverrun="CLIP" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets bottom="28.0" left="284.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="cap_eng" layoutX="515.0" layoutY="120.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="23.0" prefWidth="52.0" style="-fx-border-color: black; -fx-background-color: white;" textOverrun="CLIP" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets bottom="-64.0" left="284.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="cap_vos" layoutX="515.0" layoutY="120.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="23.0" prefWidth="52.0" style="-fx-border-color: black; -fx-background-color: white;" textOverrun="CLIP" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets bottom="-157.0" left="284.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Castellano" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="112.0" left="201.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="432.0" layoutY="87.0" text="Latino" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="28.0" left="201.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="432.0" layoutY="129.0" prefHeight="21.0" prefWidth="42.0" text="Inglés" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="-64.0" left="201.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="432.0" layoutY="175.0" prefHeight="21.0" prefWidth="42.0" text="V.O.S." GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="-157.0" left="201.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
