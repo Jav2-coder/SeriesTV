@@ -42,7 +42,7 @@ public class SeriesController {
 	public void busquedaSeries(ActionEvent event) {
 		
 		WebDriver navegador = new FirefoxDriver();
-		navegador.navigate().to("http://seriesblanco.com");
+		navegador.get("http://seriesblanco.com");
 		navegador.manage().window().maximize();
 		
 		WebElement buscador = navegador.findElement(By.id("buscar-blanco"));
@@ -63,7 +63,7 @@ public class SeriesController {
 			alert.setContentText("El resultado no es el deseado.\nHaga una nueva.");
 			alert.showAndWait();
 			
-			navegador.close();
+			navegador.quit();
 			
 		} else {
 			
@@ -72,11 +72,11 @@ public class SeriesController {
 			
 			System.out.println(navegador.getCurrentUrl());
 			
-			/*WebElement boxTemp = navegador.findElement(By.xpath("//*[contains(@id, 'post-body-')]"));
+			WebElement boxTemp = navegador.findElement(By.xpath("//*[contains(@id, 'post-body-')]"));
 			
 			temp = boxTemp.findElements(By.tagName("h2"));
 			
-			System.out.println(temp.size());*/
+			System.out.println(temp.size());
 		}
 	}
 	
