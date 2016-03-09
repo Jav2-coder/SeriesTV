@@ -10,7 +10,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 import javafx.scene.control.ListView;
@@ -38,6 +43,8 @@ public class SeriesController {
 
 	private List<WebElement> temp;
 	
+	private ObservableList<String> options;
+	
 	@FXML
 	public void busquedaSeries(ActionEvent event) {
 		
@@ -63,18 +70,27 @@ public class SeriesController {
 			alert.setContentText("El resultado no es el deseado.\nHaga una nueva.");
 			alert.showAndWait();
 			
-			navegador.quit();
+			navegador.close();
 			
 		} else {
 			
-			WebElement serie = series.get(0);
+			WebElement serie = divSeries.findElement(By.xpath("./div[1]/div/a"));
+			
 			serie.click();
 			
-			System.out.println(navegador.getCurrentUrl());
+			WebDriverWait wait = new WebDriverWait(navegador, 500);
+			
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@id, 'post-body-')]")));
 			
 			WebElement boxTemp = navegador.findElement(By.xpath("//*[contains(@id, 'post-body-')]"));
 			
 			temp = boxTemp.findElements(By.tagName("h2"));
+			
+			for(WebElement t : temp){
+				
+				temporadas.getItems().add(t.getText());
+				
+			}
 			
 			System.out.println(temp.size());
 		}
