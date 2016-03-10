@@ -140,7 +140,11 @@ public class SeriesController {
 
 		for (WebElement cap : listaCapitulos) {
 
-			list_cap.getItems().add(cap.getText());
+			String hrefCap = cap.getAttribute("href");
+			
+			String [] nomCap = hrefCap.split("/");
+			
+			list_cap.getItems().add(nomCap[nomCap.length - 2]);
 
 		}
 

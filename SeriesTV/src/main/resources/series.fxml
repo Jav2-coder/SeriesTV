@@ -52,7 +52,7 @@
                   <Insets bottom="224.0" left="36.0" />
                </GridPane.margin>
             </ComboBox>
-            <ListView fx:id="list_cap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="74.0" GridPane.columnIndex="1">
+            <ListView fx:id="list_cap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="144.0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets left="36.0" top="28.0" />
                </GridPane.margin>
