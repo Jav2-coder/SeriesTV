@@ -7,7 +7,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
- * Hello world!
+ * 
+ * @author Surrui
  *
  */
 public class App extends Application {
@@ -25,6 +26,10 @@ public class App extends Application {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

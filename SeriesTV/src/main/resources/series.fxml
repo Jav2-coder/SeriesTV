@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane fx:controller="net.javierjimenez.SeriesTV.SeriesController" prefHeight="400.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.javierjimenez.SeriesTV.SeriesController">
    <children>
       <GridPane prefHeight="113.0" prefWidth="600.0">
         <columnConstraints>
@@ -47,7 +47,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ComboBox fx:id="temporadas" onAction="#listaTemporadas" prefWidth="300.0" GridPane.columnIndex="1">
+            <ComboBox fx:id="temporadas" onAction="#listaTemporadas" prefWidth="300.0" promptText="Temporadas" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets bottom="224.0" left="36.0" />
                </GridPane.margin>
