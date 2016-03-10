@@ -99,7 +99,7 @@ public class SeriesController {
 
 			serie.click();
 
-			WebDriverWait wait = new WebDriverWait(navegador, 500);
+			WebDriverWait wait = new WebDriverWait(navegador, 30);
 
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@id, 'post-body-')]")));
 
